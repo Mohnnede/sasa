@@ -1,29 +1,271 @@
+
+
+
 <!DOCTYPE html>
-  <head>
-    <title>مثال بسيط في HTML</title>
-  </head>
-  <body>
-  <a href="other-page.html"><img src="my-image.jpg" alt="https://youtu.be/Gsyp--HOYjA?si=Lq1H6acwU0MPXMaY"></a>
-    <h1>مرحبًا بك في موقعي!</h1>
-    <p>هذا نص مثالي لمحتوى الصفحة.
-    <a href="https://example.com">زيارة موقعنا</a>
-<h2 >raed</h2>
-<table border=1 width=80%><tr>
-<td>r</td> <td>m</td
-</tr></table>
-<br>
-<table>
-	<tr>
-		<td> محرم </td>
-		<td> 1 </td>
-	</tr>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeToo</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #4e4376, #2b5876); /* تدرج لوني هادئ */
+      color: #fff;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid #ff6347;
+    }
+    h1 {
+      font-size: 3.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 5px #000;
+    }
+    nav {
+      text-align: center;
+      margin-top: 20px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #ff6347;
+      text-decoration: underline;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding: 30px;
+    }
+    .section {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+      width: 45%;
+      margin: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .section:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+    }
+    .section h2 {
+      font-size: 2.5rem;
+      color: #ff6347;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .section p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    .social-button {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: center;
+      margin-right: 15px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .discord { 
+      background-color: #7289da;
+      color: white;
+    }
+    .discord:hover { 
+      background-color: #5b6eae; 
+      transform: scale(1.05);
+    }
+    .instagram { 
+      background-color: #e4405f; 
+      color: white;
+    }
+    .instagram:hover { 
+      background-color: #d72c49; 
+      transform: scale(1.05);
+    }
+    .twitter { 
+      background-color: #1da1f2;
+      color: white;
+    }
+    .twitter:hover { 
+      background-color: #0d95e8; 
+      transform: scale(1.05);
+    }
+    .facebook { 
+      background-color: #3b5998;
+      color: white;
+    }
+    .facebook:hover { 
+      background-color: #2d4373;
+      transform: scale(1.05);
+    }
+    .linkedin { 
+      background-color: #0077b5;
+      color: white;
+    }
+    .linkedin:hover { 
+      background-color: #00628c; 
+      transform: scale(1.05);
+    }
+    .game-card {
+      background-color: #333;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s;
+    }
+    .game-card:hover {
+      transform: scale(1.05);
+    }
+    .game-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    .game-card .game-info {
+      flex-grow: 1;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: #fff;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+    .cookies-message {
+      background-color: rgba(0, 0, 0, 0.9);
+      color: #fff;
+      padding: 12px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 1000;
+    }
+    .cookies-message a {
+      color: #ff6347;
+      text-decoration: underline;
+    }
+    .cookies-message button {
+      padding: 8px 16px;
+      margin-left: 10px;
+      background-color: #ff6347;
+      border: none;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .cookies-message button:hover {
+      background-color: #ff5037;
+    }
+  </style>
+</head>
+<body>
 
-	<tr>
-		<td> صفر </td>
-		<td> 2 </td>
-	</tr>
-</table>
-  </body>
+  <header>
+    <h1>MeToo</h1>
+    <nav>
+      <a href="#about">من أنا</a>
+      <a href="#hobbies">هواياتي</a>
+      <a href="#games">ألعابي المفضلة</a>
+      <a href="#contact">اتصل بي</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- قسم "من أنا" -->
+    <div id="about" class="section">
+      <h2>من أنا</h2>
+      <p>اسمي: <strong>مهند رائد</strong></p>
+      <p>أنا مبرمج ومصمم مواقع، أحب البرمجة، تطوير الألعاب، وتجربة التقنيات الحديثة.</p>
+      <p>أستمتع باللعب على الحواسيب والأجهزة اللوحية، وأبحث دائمًا عن طرق لتحسين مهاراتي في البرمجة وتطوير الألعاب.</p>
+    </div>
+
+    <!-- قسم "هواياتي" -->
+    <div id="hobbies" class="section">
+      <h2>هواياتي</h2>
+      <p>من أهم هواياتي:</p>
+      <ul>
+        <li>البرمجة وتصميم المواقع</li>
+        <li>الألعاب الإلكترونية</li>
+        <li>التعلم المستمر والتجربة التقنية</li>
+      </ul>
+      <p>أعشق التعلم عن الأنظمة الجديدة والتقنيات الحديثة في البرمجة وتطوير الألعاب.</p>
+    </div>
+
+    <!-- قسم "ألعابي المفضلة" -->
+    <div id="games" class="section">
+      <h2>ألعابي المفضلة</h2>
+      <div class="game-card">
+        
+        <div class="game-info">
+          <p><strong>فورتنايت</strong></p>
+          <p>أحد أفضل الألعاب التي أحب لعبها مع أصدقائي. تجربة لعب ممتعة وإمكانية بناء عالمك الخاص.</p>
+        </div>
+      </div>
+      <div class="game-card">
+      
+        <div class="game-info">
+          <p><strong>GTA V</strong></p>
+          <p>لعبة أكشن مفتوحة العالم حيث يمكنك القيام بالعديد من الأنشطة الممتعة، سواء كانت قانونية أو غير قانونية!</p>
+        </div>
+      </div>
+      <div class="game-card">
+      
+        <div class="game-info">
+          <p><strong>ماين كرافت</strong></p>
+          <p>لعبة رائعة تتيح لك بناء عالمك الخاص من خلال كتل مكونة من مواد مختلفة. متعة لا تنتهي!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- قسم "اتصل بي" -->
+    <div id="contact" class="section">
+      <h2>اتصل بي</h2>
+      <p>تابعني على وسائل التواصل الاجتماعي:</p>
+      <a href="https://www.instagram.com/7.oixe" class="social-button instagram" target="_blank">إنستغرام</a>
+
+      <a href="https://discord.gg/https://discord.gg/UtZYQRcS" class="social-button discord" target="_blank">ديسكورد</a>
+    </div>
+  </div>
+
+
+  </div>
+
+  <script>
+ 
+    }
+  </script>
+
+</body>
 </html>
-
-
